@@ -45,8 +45,41 @@
 				height: 28px;
 			}
 
+			.ArchiveBanner {
+				background-color: #f0f0f0;
+				color: #333;
+				padding: 0.75rem 1rem;
+				text-align: center;
+				font-size: 0.9rem;
+				border-top: 1px solid #d6d6d6;
+				border-bottom: 1px solid #d6d6d6;
+				position: fixed;
+				top: 60px;
+				width: 100%;
+				z-index: 999;
+				cursor: pointer; /* Add cursor style to indicate clickability */
+				transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+			}
+
+			.ArchiveBanner:hover {
+				background-color: #e0e0e0; /* Slightly darker background on hover */
+			}
+
+			.ArchiveBanner p {
+				margin: 0;
+			}
+
+			.ArchiveBanner a {
+				color: #a256ff;
+				text-decoration: underline;
+			}
+
 			.sidebar {
-				margin: 80px 0 0 0;
+				margin: 120px 0 0 0;
+			}
+
+			.content {
+				margin-top: 120px;
 			}
 
 			.Menu__Top__Menu {
@@ -68,6 +101,10 @@
 				}
 				.Menu__Top__Menu__Item {
 					display: none !important;
+				}
+				.ArchiveBanner {
+					font-size: 0.8rem;
+					padding: 0.5rem 0.75rem;
 				}
 			}
 			@media screen and (min-width: 600px) {
@@ -113,6 +150,9 @@
 			</div>
 		</nav>
 
+		<div id="archiveBanner" class="ArchiveBanner">
+			<p>This site is archived. Visit the <a href="https://ml5js.org">new ml5.js website</a> at ml5js.org 🎉</p>
+		</div>
 		<div id="app">loading...</div>
 		<script>
 			window.$docsify = {
@@ -124,10 +164,21 @@
 				},
 				subMaxLevel: 2,
 				relativePath: true,
+				topMargin: 210,
 				maxLevel: 2,
 				mergeNavbar: true,
 				auto2top: true,
 			};
+
+	document.addEventListener('DOMContentLoaded', function () {
+		var archiveBanner = document.getElementById('archiveBanner');
+		archiveBanner.addEventListener('click', function (event) {
+			// Prevent the default action for the anchor tag inside the banner
+			event.preventDefault();
+			// Open the new ml5.js website in a new tab
+			window.open('https://docs.ml5js.org', '_blank');
+		});
+	});
 		</script>
 		<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 		<!-- Plugins -->

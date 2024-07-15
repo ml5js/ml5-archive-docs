@@ -71,7 +71,7 @@ Here you can see that we read in the javascript libraries. This includes our ml5
   <title>Image classification using MobileNet and p5.js</title>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
-  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
 </head>
 
 <body>
