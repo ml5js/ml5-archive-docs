@@ -1,0 +1,15 @@
+{
+	"name": "legacy-example-updates",
+	"version": "0.0.1",
+	"description": "## Repo Description This Repository is to archive the reference documents for the old version of ml5.js website.",
+	"main": "index.js",
+	"directories": {
+		"doc": "docs"
+	},
+	"scripts": {
+		"upload-legacy-examples": "node scripts/uploadLegacyExamples.js",
+		"update-ml5-version": "node scripts/updateMl5version.js"
+	},
+	"author": "",
+	"license": "ISC"
+}
