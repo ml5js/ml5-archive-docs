@@ -1,5 +1,9 @@
 # ml5-archive-docs
 
+> [!IMPORTANT] Update on 2024-11-23
+> Added legacy examples and p5 web editor example update scripts into this repo. If you found any issues or want to contribute, please feel free to open an issue or PR.
+
+
 ## Repo Description
 This Repository is to archive the reference documents for the old version of ml5.js website. 
 
